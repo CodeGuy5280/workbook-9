@@ -8,10 +8,14 @@ import java.util.List;
 
 @Component
 public class NorthwindApplication implements CommandLineRunner {
-    @Autowired
+
     private ProductDao productDao;
-    @Autowired
     private ProductService service;
+
+public NorthwindApplication(ProductDao productDao, ProductService service){
+	this.productDao = productDao;
+	this.service = service;
+}
 
     public void run(String... args){
         service.addProduct("Items");
