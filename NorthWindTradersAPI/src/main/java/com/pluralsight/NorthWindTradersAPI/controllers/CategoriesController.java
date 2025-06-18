@@ -3,6 +3,7 @@ package com.pluralsight.NorthWindTradersAPI.controllers;
 import com.pluralsight.NorthWindTradersAPI.modules.Category;
 import com.pluralsight.NorthWindTradersAPI.modules.Product;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -24,6 +25,15 @@ import java.util.List;
     @GetMapping("/categories")
     public List<Category> getAllCategories() {
         return categories;
+    }
+
+    //Adding missing portion for specifying each
+    @GetMapping("/category/{categoryId}")
+    public Category getCategoryById(@PathVariable int categoryId){
+        for (Category category : categories)
+            if (category.getCategoryId() == categoryId)
+                return category;
+        return null;
     }
 }
 
