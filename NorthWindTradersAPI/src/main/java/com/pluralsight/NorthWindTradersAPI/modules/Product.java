@@ -6,9 +6,6 @@ public class Product {
     int categoryId;
     double unitPrice;
 
-    public Product(){
-
-    }
 
     public Product(int productId, String productName, int categoryId, double unitPrice) {
         this.productId = productId;
