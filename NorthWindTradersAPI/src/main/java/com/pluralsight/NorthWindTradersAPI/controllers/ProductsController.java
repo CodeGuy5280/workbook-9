@@ -18,7 +18,7 @@ public class ProductsController {
     public ProductsController (){
         products.add(new Product(1,"Shiny", 1, 69.99   ));
         products.add(new Product(2, "Long sleeve", 2, 39.99 ));
-        products.add(new Product(3, "Valour", 3, 59.99));
+        products.add(new Product(3, "Velour", 3, 59.99));
     }
 
     @GetMapping("/products")
