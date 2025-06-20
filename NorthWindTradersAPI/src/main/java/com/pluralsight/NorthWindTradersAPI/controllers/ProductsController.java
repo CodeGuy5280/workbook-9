@@ -27,7 +27,7 @@ public class ProductsController {
         return products;
     }
 
-    //Adding missing portion for specifying each
+    //Adding missing portion for specifying each GETMAPPING
     @GetMapping("/products/{productId}")
     public Product getProductById(@PathVariable int productId){
         for (Product product : products)

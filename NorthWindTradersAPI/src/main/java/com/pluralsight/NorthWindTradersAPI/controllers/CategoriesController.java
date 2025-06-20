@@ -27,7 +27,7 @@ import java.util.List;
         return categories;
     }
 
-    //Adding missing portion for specifying each
+    //Adding missing portion for specifying each GETMAPPING
     @GetMapping("/category/{categoryId}")
     public Category getCategoryById(@PathVariable int categoryId){
         for (Category category : categories)
